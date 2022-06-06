@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className="home">
             {blogs.map((blog) => (
-                <div className="blog-preview">
+                <div className="blog-preview" key={blog.id}>
                     <h1>{blog.title}</h1>
                     <p>Written by {blog.author}</p>
                 </div>
