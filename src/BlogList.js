@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title }) => {
+const BlogList = ({ blogs, title, handleClick }) => {
     // const blogs = props.blogs;
     // const title = props.title;
     // console.log(props, blogs)
@@ -9,6 +9,7 @@ const BlogList = ({ blogs, title }) => {
                 <div className="blog-preview">
                     <h2>{blog.title}</h2>
                     <p>Written by {blog.author}</p>
+                    <button onClick={() => handleClick(blog.id)}>Delete Button</button>
                 </div>
             ))}
         </div>
